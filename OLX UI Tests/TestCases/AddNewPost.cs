@@ -26,7 +26,6 @@ namespace OLX_UI_Tests.TestCases
             Pages.Pages.AddPost.ClickToFreePostOption();
             Pages.Pages.AddPost.ClcikToSubmitButton();
             Assert.AreEqual( expectedMessage, Pages.Pages.Confirm.ConfirmMessage(), "The post does not published");            
-        }
-         
+        }       
     }
 }
