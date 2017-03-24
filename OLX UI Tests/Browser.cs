@@ -12,7 +12,7 @@ namespace OLX_UI_Tests
         public static void Initialize()
         {
             webDriver.Manage().Window.Maximize();
-            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(12);
+            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             Goto("");
         }
 
