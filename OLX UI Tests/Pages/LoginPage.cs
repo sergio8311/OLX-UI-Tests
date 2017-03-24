@@ -22,7 +22,6 @@ namespace OLX_UI_Tests.Pages
         {
             emailTextField.SendKeys(email);
             passwordTextField.SendKeys(password);
-
             logInButton.Click();
         }
     }

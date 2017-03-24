@@ -29,5 +29,10 @@ namespace OLX_UI_Tests.Pages
         {
             get { return GetPage<AddPostPage>(); }
         }
+
+        public static ConfirmPage Confirm
+        {
+            get { return GetPage<ConfirmPage>(); }
+        }
     }
 }
