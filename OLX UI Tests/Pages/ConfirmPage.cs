@@ -9,9 +9,9 @@ namespace OLX_UI_Tests.Pages
         public string ConfirmMessage()
         {
             String confirmMessage =
-                Browser.Driver.FindElements(By.CssSelector("div[class='clr margintop10 info successbox tcenter br3']"))
-                    .FirstOrDefault(r => r.Text.Contains("Ваше объявление принято")).NullSafeToString();
+                Browser.Driver.FindElement(By.CssSelector("p[class='xxx-large lheight24']")).Text.NullSafeToString();
+                   
             return confirmMessage;
-        }       
+        }        
     }
 }

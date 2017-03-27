@@ -34,5 +34,10 @@ namespace OLX_UI_Tests.Pages
         {
             get { return GetPage<ConfirmPage>(); }
         }
+
+        public static PaymentPage Payment
+        {
+            get { return GetPage<PaymentPage>(); }
+        }
     }
 }

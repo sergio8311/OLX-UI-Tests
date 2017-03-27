@@ -29,7 +29,7 @@ namespace OLX_UI_Tests.Pages
         public IWebElement nameTextField;
 
         [FindsBy(How = How.CssSelector, Using = "input[value='Опубликовать']")]
-        public IWebElement submitButton;
+        public IWebElement nextButton;
 
         [FindsBy(How = How.Id, Using = "autosuggest-geo-ul")]
         public IWebElement autoSuggestedLocation;
@@ -90,7 +90,7 @@ namespace OLX_UI_Tests.Pages
             OpenCategoryDropdown();
             childCategoryButton.Click();
             otherChildGoodsSubCategoryButton.Click();
-            otherChildGoodsSubCategoryButton.Click();
+            //otherChildGoodsSubCategoryButton.Click();
         }
 
         public void OpenCategoryDropdown()
@@ -98,9 +98,9 @@ namespace OLX_UI_Tests.Pages
             categoryDropDown.Click();
         }
 
-        public void ClcikToSubmitButton()
+        public void ClcikToNextButton()
         {
-            submitButton.Submit();            
+            nextButton.Submit();            
         }
 
         public void SelectFreePrice()
@@ -108,15 +108,22 @@ namespace OLX_UI_Tests.Pages
             priceFree.Click();
         }
 
-        public void FillInPostForm(string title, string description, string location, string price, string name)
+        public void ClearAddressField()
         {
+            mapAddressField.Clear();
+        }
+
+        public void FillInPostForm(string title, string description, string price, string location)
+        {
+            ClearAddressField();
             titleTextField.SendKeys(title);
             ClickToOtherChildCategry();
-            descriptionTextField.SendKeys(description);
+            descriptionTextField.SendKeys(description);                  
             mapAddressField.SendKeys(location);
             autoSuggestedLocation.Click();
             priceTextField.SendKeys(price);
-            nameTextField.SendKeys(name);
+            //Commented in case if more than one post was published
+            //nameTextField.SendKeys(name);
             ClickToUsedCondition();
             ClickToPrivateBusinessOption();         
         }
