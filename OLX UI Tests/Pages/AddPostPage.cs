@@ -90,7 +90,6 @@ namespace OLX_UI_Tests.Pages
             OpenCategoryDropdown();
             childCategoryButton.Click();
             otherChildGoodsSubCategoryButton.Click();
-            //otherChildGoodsSubCategoryButton.Click();
         }
 
         public void OpenCategoryDropdown()

@@ -16,7 +16,7 @@ namespace OLX_UI_Tests.TestCases
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
             //Commented if more than one post was added
-            //Also location, name paremeters removed from Pages.Pages.AddPost.FillInPostForm() method
+            //Also name paremeters removed from Pages.Pages.AddPost.FillInPostForm() method
             //var name = "First Last";
             var location = "Киев, Киевская область, Дарницкий";
             var price = "100";
@@ -28,6 +28,8 @@ namespace OLX_UI_Tests.TestCases
             Pages.Pages.AddPost.FillInPostForm(title, description, price, location);
             Pages.Pages.AddPost.ClickToFreePostOption();
             Pages.Pages.AddPost.ClcikToNextButton();
+
+            //For new users need to uncoment
             //Pages.Pages.Payment.ClickToAddPostToTopChecbox();
             //Pages.Pages.Payment.ClickToAddPostWitoutPromotion();
             Assert.AreEqual( expectedMessage, Pages.Pages.Confirm.ConfirmMessage(), "The post does not published");            
